@@ -23,3 +23,28 @@ document.getElementById("generate-pin-btn").addEventListener("click", function (
 
 
 
+
+
+
+document.getElementById("calculator-body").addEventListener("click", function(event){
+    const typedNumberDisplayField= document.getElementById("typed-number-display-field")
+    const NewDisplayFieldNumber=event.target.innerText;
+    
+    if(isNaN(NewDisplayFieldNumber)){
+           
+    }
+    
+    else{
+        const previousDisplayFieldNumber= typedNumberDisplayField.value;
+        typedNumberDisplayField.value= previousDisplayFieldNumber+NewDisplayFieldNumber
+
+    }
+    
+
+
+    
+
+
+
+
+})
