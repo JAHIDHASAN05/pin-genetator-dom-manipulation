@@ -57,3 +57,28 @@ document.getElementById("calculator-body").addEventListener("click", function(ev
 
 
 })
+
+
+
+
+document.getElementById("btn-submit").addEventListener("click", function(){
+
+    const pinFailureMassage= document.getElementById("pin-failure")
+    const pinSuccesMassage= document.getElementById("pin-success")
+
+
+    const generatePinDisplayField= document.getElementById("generate-pin-display-field")
+    const currentPin = generatePinDisplayField.value;
+
+    const typedNumberDisplayField= document.getElementById("typed-number-display-field")
+     const typedNumber= typedNumberDisplayField.value;
+    
+     if (typedNumber=== currentPin){
+        pinSuccesMassage.style.display="block"
+
+     }
+     else{
+        pinFailureMassage.style.display="block"
+
+     }
+})
