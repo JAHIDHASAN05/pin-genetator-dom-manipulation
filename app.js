@@ -29,16 +29,22 @@ document.getElementById("generate-pin-btn").addEventListener("click", function (
 document.getElementById("calculator-body").addEventListener("click", function(event){
     const typedNumberDisplayField= document.getElementById("typed-number-display-field")
     const NewDisplayFieldNumber=event.target.innerText;
+    const previousDisplayFieldNumber= typedNumberDisplayField.value;
     
     if(isNaN(NewDisplayFieldNumber)){
         if(NewDisplayFieldNumber=="C"){
             typedNumberDisplayField.value=""
         }
-       
+        else if(NewDisplayFieldNumber=="<"){
+            const digits = previousDisplayFieldNumber.split("")
+            digits.pop()
+           const reaminingDigits= digits.join("")
+           typedNumberDisplayField.value=reaminingDigits;
+
+        }
     }
     
     else{
-        const previousDisplayFieldNumber= typedNumberDisplayField.value;
         typedNumberDisplayField.value= previousDisplayFieldNumber+NewDisplayFieldNumber
 
     }
