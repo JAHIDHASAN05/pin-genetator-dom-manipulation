@@ -31,7 +31,10 @@ document.getElementById("calculator-body").addEventListener("click", function(ev
     const NewDisplayFieldNumber=event.target.innerText;
     
     if(isNaN(NewDisplayFieldNumber)){
-           
+        if(NewDisplayFieldNumber=="C"){
+            typedNumberDisplayField.value=""
+        }
+       
     }
     
     else{
