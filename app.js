@@ -75,10 +75,12 @@ document.getElementById("btn-submit").addEventListener("click", function(){
     
      if (typedNumber=== currentPin){
         pinSuccesMassage.style.display="block"
+        pinFailureMassage.style.display="none"
 
      }
      else{
         pinFailureMassage.style.display="block"
+        pinSuccesMassage.style.display="none"
 
      }
 })
